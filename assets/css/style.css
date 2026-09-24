@@ -594,42 +594,6 @@ small {
   --sparkle: #a6c8ff;
 }
 
-body {
-  background: linear-gradient(-45deg, var(--near-black), var(--deep-blue), var(--royal-blue), var(--deep-blue), var(--near-black));
-  background-size: 400% 400%;
-  animation: swirl 22s ease infinite;
-}
-
-@keyframes swirl {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, var(--sparkle), transparent),
-    radial-gradient(2px 2px at 140px 80px, var(--sparkle), transparent),
-    radial-gradient(1.5px 1.5px at 90px 160px, var(--sparkle), transparent),
-    radial-gradient(2px 2px at 260px 40px, var(--sparkle), transparent),
-    radial-gradient(1.5px 1.5px at 320px 200px, var(--sparkle), transparent),
-    radial-gradient(2px 2px at 380px 120px, var(--sparkle), transparent);
-  background-repeat: repeat;
-  background-size: 400px 300px;
-  opacity: 0.5;
-  animation: twinkle 4s ease-in-out infinite alternate;
-}
-
-@keyframes twinkle {
-  from { opacity: 0.25; }
-  to   { opacity: 0.65; }
-}
-
 .teal, .teal.lighten-1, .teal.lighten-2, .teal.darken-1, .teal.darken-2 {
   background-color: var(--royal-blue) !important;
 }
@@ -656,15 +620,6 @@ nav, .side-nav {
   color: var(--sparkle) !important;
 }
 
-#intro.section {
-  background: transparent !important;
-}
-
-/* THE MISSING FIX: let the swirl show through every section, not just intro */
-main {
-  background: transparent !important;
-}
-
 /* Activity 6: Project filter buttons */
 .filter-btn {
   background-color: #444 !important;
@@ -672,4 +627,48 @@ main {
 }
 .filter-btn.active {
   background-color: var(--royal-blue) !important;
+}
+
+/* Activity 3: Animated wave canvas background, and readability fixes for text
+   sitting directly on it (outside cards, which already have their own light
+   background and dark text set above). Placed last so these override the
+   earlier teal-template rules for body, links, main, and #intro. */
+body {
+  background: #05050a;
+  color: #dbe6ff !important;
+}
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  display: block;
+}
+
+a {
+  color: var(--sparkle) !important;
+}
+
+main {
+  background: transparent !important;
+}
+
+#intro.section {
+  background: transparent !important;
+}
+
+#intro.section .container *:not(span) {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.name-title a, .name-title span {
+  color: var(--sparkle) !important;
 }

@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-
-
   <!-- Materialize - Compiled and minified CSS-->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
   <!-- Font Awesome Icon - CSS-->
@@ -16,7 +14,6 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
   <title>Faria Samanta Akbar | ECE • AI/ML • Product • Systems</title>
 
-  
   <!-- Open Graph-->
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
@@ -27,9 +24,8 @@
   <meta property="article:publisher" content="https://fariasamanta.github.io/" />
   <meta property="og:image" content="https://fariasamanta.github.io/assets/img/preview.jpg" />
   <meta name="author" content="Faria Samanta Akbar" />
-  <meta name="description" content="Electrical and Computer Engineering student interested in AI/ML, software, and embedded systems." />  
-  
- 
+  <meta name="description" content="Electrical and Computer Engineering student interested in AI/ML, software, and embedded systems." />
+
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
@@ -46,14 +42,15 @@
   <link rel="manifest" href="/assets/img/favicon/manifest.json" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#05050a" />
   <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
 </head>
 
 <body>
-  
+
+  <!-- Animated wave background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
   <!-- Navigation Menu-->
   <!-- Nav class 1 -->
   <nav class="hide-on-small-only">
@@ -62,7 +59,7 @@
       <li class="logo">
         <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
           class="brand-logo grey-blue-text">
-          <img src="/assets/img/picture.png" class="circle img-responsive profile-pic" alt="avatar">
+          <img src="/assets/img/passport-new.jpg" class="circle img-responsive profile-pic" alt="avatar">
         </a>
       </li>
 
@@ -75,64 +72,29 @@
           class="waves-effect waves-dark teal-text"><i
             class="mdi-action-trending-up small"></i><span>Experience</span></a>
       </li>
-
       <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
         <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
             class="mdi-av-my-library-books small"></i><span>Projects</span></a>
       </li>
-
       <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
-      
       <li class="bold">
-        <!--
-        ICONS:
-        -->
         <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
-
-
       <li class="bold">
-  <a aria-label="Navigate to the Places Travelled section" href="#places" class="waves-effect waves-dark teal-text"><i
-      class="mdi-maps-place small"></i><span>Places Travelled</span></a>
-</li>
-
-
+        <a aria-label="Navigate to the Places Travelled section" href="#places" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
+      </li>
       <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
         <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
       </li>
-
       <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Varad's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
         <a aria-label="Open Faria's resume in a new tab" href="/assets/resume/Faria_Akbar_Resume_Portfolio_2pg.pdf" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> 
+        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
       </li>
     </ul>
   </nav>
@@ -143,7 +105,7 @@
       class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     <div class="name-title">
       <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Faria Samanta Akbar</a>
-      <span class="black-text">ECE | AI/ML | Product | Software Developer</span>
+      <span>ECE | AI/ML | Product | Software Developer</span>
     </div>
   </nav>
 
@@ -167,17 +129,14 @@
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
-
       <li class="bold">
         <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-school small"></i><span>Education</span></a>
       </li>
-
-<li class="bold">
-  <a aria-label="Navigate to the Places Travelled section" href="#places" class="waves-effect waves-dark teal-text"><i
-      class="mdi-maps-place small"></i><span>Places Travelled</span></a>
-</li>
-
+      <li class="bold">
+        <a aria-label="Navigate to the Places Travelled section" href="#places" class="waves-effect waves-dark teal-text"><i
+            class="mdi-maps-place small"></i><span>Places Travelled</span></a>
+      </li>
       <li class="bold">
         <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
@@ -199,36 +158,20 @@
           <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
             <div class="caption">
               <h2>Hi, I'm <span class="teal">Faria Samanta Akbar.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-             <h5>Electrical & Computer Engineering student interested in building real-world products at the intersection of AI/ML, software, embedded systems, hardware, and human-centered design. I enjoy solving practical problems, working with people, connecting technical and business perspectives, and helping ideas move from concept to implementation.
-</h5>
+              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#a6c8ff"></span></h5>
+              <h5>Electrical & Computer Engineering student interested in building real-world products at the intersection of AI/ML, software, embedded systems, hardware, and human-centered design. I enjoy solving practical problems, working with people, connecting technical and business perspectives, and helping ideas move from concept to implementation.</h5>
             </div>
             <div class="social">
               <a href="https://linkedin.com/in/faria-samanta-akbar" target="_blank">
-  <button class="icon-btn linkedin">
-    <i class="fa fa-linkedin"></i>
-  </button>
-</a>
-<a href="https://github.com/FariaSamanta/" target="_blank">
-  <button class="icon-btn github">
-    <i class="fa fa-github"></i>
-  </button>
-</a>
-
-              <!-- <a href="https://angel.co/u/varad_bhogayata" target="_blank">
-                <button class="icon-btn angellist">
-                  <i class="fa fa-angellist"></i>
+                <button class="icon-btn linkedin">
+                  <i class="fa fa-linkedin"></i>
                 </button>
-              </a> -->
-
-              <!-- <a href="http://linkedin.com/in/varadbhogayata" target="_blank">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-
-                  </span>
-              </a> -->
+              </a>
+              <a href="https://github.com/FariaSamanta/" target="_blank">
+                <button class="icon-btn github">
+                  <i class="fa fa-github"></i>
+                </button>
+              </a>
             </div>
             <div class='buttons'>
               <a href="#about" class="readme">Read More</a>
@@ -243,508 +186,555 @@
     <section id="about" class="section scrollspy">
       <h3 class="page-title white-text teal">About</h3>
       <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-
-          </h2>
-        </blockquote> -->        
         <p>
-  I am an Electrical & Computer Engineering student at the University of Toronto with interests spanning AI/ML, software engineering, embedded systems, hardware, product development, and project management.
-</p>
-
-<p>
-  I enjoy working on real-world problems where technology needs to connect with people, users, and practical constraints. I am especially interested in projects that require both technical problem-solving and collaboration across different teams or stakeholders.
-</p>
-
-<p>
-  My experience includes machine learning and computer vision, software development, engineering design, research-oriented work, and team-based technical projects. I also enjoy taking ownership of planning, communication, product decisions, and turning an idea into something that can actually be built and used.
-</p>
-
-<p>
-  I want to continue exploring different areas of engineering rather than limiting myself to one specialization, while developing the technical depth and leadership skills needed to build meaningful products and systems.
-</p>
-        <p>
-          <ul>
-  <li><b>Languages:</b> Python, JavaScript, C, C++, HTML/CSS, MATLAB</li>
-  <li><b>AI/ML:</b> Machine Learning, Computer Vision, Deep Learning, PyTorch, TensorFlow, OpenCV</li>
-  <li><b>Software:</b> Git, GitHub, APIs, Web Development, Testing, Backend Development</li>
-  <li><b>Hardware & Systems:</b> Embedded Systems, Digital Systems, FPGA/RTL, Electronics</li>
-  <li><b>Product & Leadership:</b> Product Development, Project Management, Stakeholder Communication, Technical Planning, Team Collaboration</li>
-</ul>
-          
+          I am an Electrical & Computer Engineering student at the University of Toronto with interests spanning AI/ML, software engineering, embedded systems, hardware, product development, and project management.
         </p>
-          
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
         <p>
-  I am looking for opportunities that let me build, learn, and work closely with people while solving meaningful real-world problems. Whether I am working on AI/ML, software, embedded systems, hardware, product development, or project leadership, I am most motivated when I can understand the bigger problem, explore different approaches, and help turn an idea into something useful and tangible.
-</p>
-        <!-- <p>
-          Another Paragraph
-        </p>  -->
-        <!-- <p>
-        <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage"
-          href="https://www.smashingmagazine.com/inclusive-design-patterns/">Accessibility</a>&nbsp;//&nbsp;<a
-          aria-label="Navigate to the Full Stack React homepage"
-          href="https://www.fullstackreact.com/">React</a>&nbsp;//&nbsp;<a
-          aria-label='Navigate to the article "Scalable CSS"'
-          href="https://mrmrs.github.io/writing/2016/03/24/scalable-css/">Design Systems</a>
-        </p> -->
+          I enjoy working on real-world problems where technology needs to connect with people, users, and practical constraints. I am especially interested in projects that require both technical problem-solving and collaboration across different teams or stakeholders.
+        </p>
+        <p>
+          My experience includes machine learning and computer vision, software development, engineering design, research-oriented work, and team-based technical projects. I also enjoy taking ownership of planning, communication, product decisions, and turning an idea into something that can actually be built and used.
+        </p>
+        <p>
+          I want to continue exploring different areas of engineering rather than limiting myself to one specialization, while developing the technical depth and leadership skills needed to build meaningful products and systems.
+        </p>
+        <ul>
+          <li><b>Languages:</b> Python, JavaScript, C, C++, HTML/CSS, MATLAB</li>
+          <li><b>AI/ML:</b> Machine Learning, Computer Vision, Deep Learning, PyTorch, TensorFlow, OpenCV</li>
+          <li><b>Software:</b> Git, GitHub, APIs, Web Development, Testing, Backend Development</li>
+          <li><b>Hardware & Systems:</b> Embedded Systems, Digital Systems, FPGA/RTL, Electronics</li>
+          <li><b>Product & Leadership:</b> Product Development, Project Management, Stakeholder Communication, Technical Planning, Team Collaboration</li>
+        </ul>
+        <p>
+          I am looking for opportunities that let me build, learn, and work closely with people while solving meaningful real-world problems. Whether I am working on AI/ML, software, embedded systems, hardware, product development, or project leadership, I am most motivated when I can understand the bigger problem, explore different approaches, and help turn an idea into something useful and tangible.
+        </p>
       </div>
     </section>
 
-
     <!-- Third Section: Experience -->
-    <!-- Third Section: Experience -->
-<section id="experience" class="section scrollspy">
-  <h3 class="page-title white-text teal">Experience</h3>
-  <div class="container">
+    <section id="experience" class="section scrollspy">
+      <h3 class="page-title white-text teal">Experience</h3>
+      <div class="container">
 
-    <!-- Orix Geoscience -->
-    <div class="card">
-      <div class="card-content">
-        <div class="row">
-          <div class="col s12 m2">
-            <a href="https://www.orixgeo.com/" target="_blank"><img alt="Orix Geoscience logo"
-                src="/assets/img/exp-orix-logo.png" class="responsive-img center-block" /></a>
+        <!-- Orix Geoscience -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a href="https://www.orixgeo.com/" target="_blank"><img alt="Orix Geoscience logo"
+                    src="/assets/img/exp-orix-logo.png" class="responsive-img center-block" /></a>
+              </div>
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://www.orixgeo.com/" target="_blank"
+                      class="teal-text hoverline">Orix Geoscience</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Machine Learning and Computer Vision Intern</div>
+            <ul>
+              <li>Built a Python and OpenCV pipeline as the sole engineer, converting scanned geological maps into structured, GIS-ready vector data end to end, work geologists previously did by hand.</li>
+              <li>Trained SE-UNet and Mamba-style deep learning models in PyTorch to generalize segmentation beyond a colour heuristic, pushing per-map accuracy from about 70% to about 98%.</li>
+              <li>Tested the pipeline on 1,500 real maps, reaching 80% or higher accuracy on deeply coloured maps and about 60% on black and white maps.</li>
+              <li>Built a validation tool comparing pipeline output against source maps to flag misaligned or dropped features, cutting repeated QA effort about 30%.</li>
+              <li>Cut per-map turnaround from a manual minimum of 10 hours, and up to 2 weeks, down to 3 to 4 minutes, extending the internship into the fall based on delivered results.</li>
+              <li>Managed the codebase in Azure DevOps Repos, used Pipelines and Test Plans as part of the development workflow, and trained deep learning models on a rented Azure GPU-enabled virtual machine.</li>
+              <li><b>Tools:</b> Python, OpenCV, PyTorch, SE-UNet, Mamba, Azure DevOps</li>
+            </ul>
           </div>
-          <div class="col s12 m10">
-            <p>
-              <span class="card-title"><a href="https://www.orixgeo.com/" target="_blank"
-                  class="teal-text hoverline">Orix Geoscience</a></span>
-            </p>
+          <div class="card-action">
+            <span>Jun 2026 - Present | Toronto, Canada</span>
           </div>
         </div>
-        <div class="role brown-text text-darken-2">Machine Learning and Computer Vision Intern</div>
-        <ul>
-          <li>
-            Built a Python and OpenCV pipeline as the sole engineer, converting scanned geological maps into structured, GIS-ready vector data end to end, work geologists previously did by hand.
-          </li>
-          <li>
-            Trained SE-UNet and Mamba-style deep learning models in PyTorch to generalize segmentation beyond a colour heuristic, pushing per-map accuracy from about 70% to about 98%.
-          </li>
-          <li>
-            Tested the pipeline on 1,500 real maps, reaching 80% or higher accuracy on deeply coloured maps and about 60% on black and white maps.
-          </li>
-          <li>
-            Built a validation tool comparing pipeline output against source maps to flag misaligned or dropped features, cutting repeated QA effort by 25 to 35%.
-          </li>
-          <li>
-            Cut per-map turnaround from a manual minimum of 10 hours, and up to 2 weeks, down to 3 to 4 minutes, extending the internship into the fall based on delivered results.
-          </li>
-          <li>
-            <b>Tools:</b> Python, OpenCV, PyTorch, SE-UNet, Mamba
-          </li>
-        </ul>
-      </div>
-      <div class="card-action">
-        <span>Jun 2026 - Present | Toronto, Canada</span>
-      </div>
-    </div>
 
-    <!-- GoBolt -->
-    <div class="card">
-      <div class="card-content">
-        <div class="row">
-          <div class="col s12 m2">
-            <a href="https://www.gobolt.com/" target="_blank"><img alt="GoBolt logo"
-                src="/assets/img/exp-gobolt-logo.png" class="responsive-img center-block" /></a>
+        <!-- GoBolt -->
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 m2">
+                <a href="https://www.gobolt.com/" target="_blank"><img alt="GoBolt logo"
+                    src="/assets/img/exp-gobolt-logo.png" class="responsive-img center-block" /></a>
+              </div>
+              <div class="col s12 m10">
+                <p>
+                  <span class="card-title"><a href="https://www.gobolt.com/" target="_blank"
+                      class="teal-text hoverline">GoBolt</a></span>
+                </p>
+              </div>
+            </div>
+            <div class="role brown-text text-darken-2">Automation Lead, University Design Course, Real Client</div>
+            <ul>
+              <li>Identified the automation opportunity, chose the design direction, and directed a 6-person team delivering a real client engagement.</li>
+              <li>Programmed the Python control logic that routes packages by threshold rules such as size and weight.</li>
+              <li>Completed about half the SolidWorks CAD transfer from my own paper design, reaching 99% sortation accuracy and 20,000 to 30,000 packages per hour.</li>
+              <li>Built the financial model behind the business case, projecting about 200% ROI and 90% higher profit than the client's manual process, cutting required labour from 20 to 40 workers per shift down to 8.</li>
+              <li>Took over client-facing decisions when their primary contact abruptly stopped responding mid-project. GoBolt reportedly went on to implement much of the delivered design into their live system.</li>
+              <li><b>Tools:</b> Python, SolidWorks, financial modeling</li>
+            </ul>
           </div>
-          <div class="col s12 m10">
-            <p>
-              <span class="card-title"><a href="https://www.gobolt.com/" target="_blank"
-                  class="teal-text hoverline">GoBolt</a></span>
-            </p>
+          <div class="card-action">
+            <span>Jan 2025 - Apr 2025 | Toronto, Canada</span>
           </div>
         </div>
-        <div class="role brown-text text-darken-2">Automation Lead, University Design Course, Real Client</div>
-        <ul>
-          <li>
-            Identified the automation opportunity, chose the design direction, and directed a 6-person team delivering a real client engagement.
-          </li>
-          <li>
-            Programmed the Python control logic that routes packages by threshold rules such as size and weight.
-          </li>
-          <li>
-            Completed about half the SolidWorks CAD transfer from my own paper design, reaching 99% sortation accuracy and 20,000 to 30,000 packages per hour.
-          </li>
-          <li>
-            Built the financial model behind the business case, projecting about 200% ROI and 90% higher profit than the client's manual process, cutting required labour from 20 to 40 workers per shift down to 8.
-          </li>
-          <li>
-            Took over client-facing decisions when their primary contact abruptly stopped responding mid-project. GoBolt has since implemented roughly 70% of the delivered design into their live system.
-          </li>
-          <li>
-            <b>Tools:</b> Python, SolidWorks, financial modeling
-          </li>
-        </ul>
-      </div>
-      <div class="card-action">
-        <span>Jan 2025 - Apr 2025 | Toronto, Canada</span>
-      </div>
-    </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
     <!-- Fourth Section: Projects -->
-<section id="projects" class="section scrollspy">
-  <h3 class="page-title white-text teal">Projects</h3>
-  <div class="container">
-    <div id="projects-container" class="row"></div>
-    <div class="center-align">
-      <button id="load-more-btn" class="btn waves-effect waves-light teal">Load More</button>
-    </div>
-  </div>
-</section>
+    <section id="projects" class="section scrollspy">
+      <h3 class="page-title white-text teal">Projects</h3>
+      <div class="container">
 
-<script>
-  const projectsData = [
-    {
-      title: "Voyagista Explorer",
-      description: "A street map and courier-routing application built in C++.",
-      image: "/assets/img/project-voyagista.png",
-      tools: "C++, EZGL, GTK",
-      bullets: [
-        "Implemented driving, walking, and walk-to-pickup routing using Dijkstra shortest-path search.",
-        "Cut pickup-search computation 30 to 40% with a single reverse search from the destination.",
-        "Built a multi-threaded delivery optimizer using std::async, std::atomic, and std::mutex.",
-        "Accelerated preprocessing 2 to 4 times and improved route quality 15 to 25%."
-      ],
-      action: { type: "github", url: "https://github.com/FariaSamanta/TODO-voyagista", label: "Visit the GitHub repo for Voyagista Explorer" }
-    },
-    {
-      title: "UTMIST AI2",
-      description: "A reinforcement learning agent trained to play a fighting game, presented at EXPO.",
-      image: "/assets/img/project-utmist.png",
-      tools: "Python, OpenAI Gym, Stable Baselines 3, PPO, Tenstorrent TTNN",
-      bullets: [
-        "Built a custom Gym environment and PPO agent, improving training convergence 20 to 30% through reward shaping.",
-        "Reached Top 10 placement and presented the agent at EXPO.",
-        "Ported the trained model to Tenstorrent's TTNN accelerator stack, adapting PyTorch tensor operations to a grid-based architecture."
-      ],
-      action: { type: "github", url: "https://github.com/FariaSamanta/UTMIST-AI2", label: "Visit the GitHub repo for UTMIST AI2" }
-    },
-    {
-      title: "Voice-Controlled Ball Survival Game",
-      description: "A real-time embedded game built in assembly and C on the DE1-SoC.",
-      image: "/assets/img/project-ece243.png",
-      tools: "Assembly, C, DE1-SoC, VGA graphics, audio input",
-      bullets: [
-        "Built a real-time game using memory-mapped IO for VGA frame-buffer rendering.",
-        "Implemented live audio input, using microphone amplitude and pitch as the game's control input.",
-        "Modeled ball physics with gravity and collision, mapping amplitude directly to lift force as the survival mechanic.",
-        "Detected pitch in real time using a zero-crossing algorithm.",
-        "Validated the game on both the CPUlator simulator and physical DE1-SoC hardware."
-      ],
-      action: { type: "none" }
-    },
-    {
-      title: "FPGA Reaction Game",
-      description: "A hardware-only game built in Verilog on the DE1-SoC testing both reaction speed and sustained focus, with mirrored on-screen text as an added cognitive challenge.",
-      image: "/assets/img/fpga_game1.jpg",
-      tools: "Verilog, DE1-SoC, Quartus, ModelSim",
-      bullets: [
-        "Designed hardware-only game logic in Verilog, including debouncing, edge detection, and FSM input validation.",
-        "Randomly assigned each of 3 physical buttons a colour prompt, blue, green, or red, at random time intervals up to 7 seconds apart to test sustained focus rather than pure reaction speed.",
-        "Required a different response per colour: two presses for blue, one press for green, and no press for red.",
-        "Built a scoring and warning FSM awarding 10 points per correct response, deducting 5 points and issuing a warning per mistake, and ending the game after 2 warnings.",
-        "Displayed all on-screen text mirrored, forcing the player to decode it under time pressure as part of the challenge."
-      ],
-      action: {
-        type: "gallery",
-        images: [
-          { src: "/assets/img/fpga_game3.jpg", alt: "Mirrored reaction game title screen" },
-          { src: "/assets/img/fpga_game4.jpg", alt: "Mirrored player selection screen, 1 player or 2 player" },
-          { src: "/assets/img/fpga_game2.jpg", alt: "Mirrored game over screen with score and time" }
-        ]
-      }
-    }
-  ];
-
-  let projectsShown = 0;
-  const PROJECTS_PER_LOAD = 2;
-
-  function renderProjectCard(project) {
-    let actionHtml = "";
-    if (project.action.type === "github") {
-      actionHtml = `
-        <div class="card-action">
-          <a aria-label="${project.action.label}" href="${project.action.url}" target="_blank"
-            data-position="top" data-tooltip="View Source"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>`;
-    } else if (project.action.type === "gallery") {
-      const thumbs = project.action.images.map(img => `
-        <div class="col s4">
-          <img alt="${img.alt}" src="${img.src}" class="materialboxed responsive-img" style="width: 100%;" />
-        </div>`).join("");
-      actionHtml = `
-        <p><small class="grey-text">Click any image to enlarge</small></p>
-        <div class="row" style="margin-bottom: 0;">${thumbs}</div>`;
-    }
-
-    const bulletsHtml = project.bullets.map(b => `<li>${b}</li>`).join("");
-
-    return `
-      <div class="col s12 m6 l4 project-card-wrapper">
-        <div class="card medium">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img alt="${project.title}" src="${project.image}" style="height: 100%; width: 100%" class="activator" />
-          </div>
-          <div class="card-content">
-            <span class="card-title activator teal-text hoverline">${project.title}<i class="mdi-navigation-more-vert right"></i></span>
-            <p>${project.description}</p>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
-            <ul>
-              <li><b>Tools:</b> ${project.tools}</li>
-              ${bulletsHtml}
-            </ul>
-            ${actionHtml}
-          </div>
+        <div class="center-align" style="margin-bottom: 20px;">
+          <button class="btn waves-effect waves-light filter-btn active" data-filter="all">All</button>
+          <button class="btn waves-effect waves-light filter-btn" data-filter="ai-ml">AI and ML</button>
+          <button class="btn waves-effect waves-light filter-btn" data-filter="software">Software</button>
+          <button class="btn waves-effect waves-light filter-btn" data-filter="embedded">Embedded and Hardware</button>
         </div>
-      </div>`;
-  }
 
-  function loadMoreProjects() {
-    const container = document.getElementById("projects-container");
-    const nextBatch = projectsData.slice(projectsShown, projectsShown + PROJECTS_PER_LOAD);
-    nextBatch.forEach(project => {
-      container.insertAdjacentHTML("beforeend", renderProjectCard(project));
-    });
-    projectsShown += nextBatch.length;
-
-    // Re-init Materialize widgets on the newly added cards
-    $(".materialboxed").materialbox();
-
-    if (projectsShown >= projectsData.length) {
-      const btn = document.getElementById("load-more-btn");
-      btn.disabled = true;
-      btn.textContent = "All projects loaded";
-      btn.classList.add("disabled");
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    loadMoreProjects(); // show first 2 on page load
-    document.getElementById("load-more-btn").addEventListener("click", loadMoreProjects);
-  });
-</script>
+        <div id="projects-container" class="row"></div>
+        <div class="center-align">
+          <button id="load-more-btn" class="btn waves-effect waves-light teal">Load More</button>
+        </div>
+      </div>
+    </section>
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy">
-  <h3 class="page-title white-text teal">Skills</h3>
-  <div class="container">
+      <h3 class="page-title white-text teal">Skills</h3>
+      <div class="container">
 
-    <div class="card">
-      <div class="card-content">
-        <h4 class="brown-text light">Languages</h4>
-        <div class="row text-center">
-          <div class="col s4 m2"><img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/cpp-logo.png" class="responsive-img" />C++</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/c-logo.png" class="responsive-img" />C</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/typescript-logo.png" class="responsive-img" />TypeScript</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/assembly-logo.png" class="responsive-img" />Assembly</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/verilog-logo.png" class="responsive-img" />Verilog</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h4 class="brown-text light">AI and Machine Learning</h4>
-        <div class="row text-center">
-          <div class="col s4 m2"><img alt="" src="/assets/img/pytorch-logo.png" class="responsive-img" />PyTorch</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h4 class="brown-text light">Hardware and CAD</h4>
-        <div class="row text-center">
-          <div class="col s4 m2"><img alt="" src="/assets/img/altium-logo.png" class="responsive-img" />Altium Designer</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/solidworks-logo.png" class="responsive-img" />SolidWorks</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/quartus-logo.png" class="responsive-img" />Quartus</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h4 class="brown-text light">Other</h4>
-        <div class="row text-center">
-          <div class="col s4 m2"><img alt="" src="/assets/img/git.png" class="responsive-img" />Git</div>
-          <div class="col s4 m2"><img alt="" src="/assets/img/linux-logo.png" class="responsive-img" />Linux</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-        
-        <!-- certifications -->
-        <!-- <div class="card">
+        <div class="card">
           <div class="card-content">
-            <h4 class="brown-text light">Certificates</h4>
-            <div class="row text-left">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Algorithms (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <h4 class="brown-text light">Languages</h4>
+            <div class="row text-center">
+              <div class="col s4 m2"><img alt="" src="/assets/img/python-logo-1-300x300.jpg" class="responsive-img" />Python</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/cpp-logo.png" class="responsive-img" />C++</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/c-logo.png" class="responsive-img" />C</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/typescript-logo.png" class="responsive-img" />TypeScript</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/assembly-logo.png" class="responsive-img" />Assembly</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/verilog-logo.png" class="responsive-img" />Verilog</div>
             </div>
           </div>
-        </div> -->
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">AI and Machine Learning</h4>
+            <div class="row text-center">
+              <div class="col s4 m2"><img alt="" src="/assets/img/pytorch-logo.png" class="responsive-img" />PyTorch</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Hardware and CAD</h4>
+            <div class="row text-center">
+              <div class="col s4 m2"><img alt="" src="/assets/img/altium-logo.png" class="responsive-img" />Altium Designer</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/solidworks-logo.png" class="responsive-img" />SolidWorks</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/quartus-logo.png" class="responsive-img" />Quartus</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Other</h4>
+            <div class="row text-center">
+              <div class="col s4 m2"><img alt="" src="/assets/img/git.png" class="responsive-img" />Git</div>
+              <div class="col s4 m2"><img alt="" src="/assets/img/linux-logo.png" class="responsive-img" />Linux</div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
 
-    <!-- Seventh Section: Education -->
+    <!-- Sixth Section: Education -->
     <section id="education" class="section scrollspy">
-  <h3 class="page-title white-text teal">Education</h3>
-  <div class="container">
-    <div class="row">
-      <div class="col s12 m8 l8">
-        <div class="card">
-          <div class="card-content">
-            <p>
-              <span class="card-title"><a href="https://www.utoronto.ca/" target="_blank" class="teal-text hoverline">University of Toronto</a></span>
-            </p>
-            <p class="brown-text">Toronto, Canada</p>
-            <p>
-              <b>Degree: </b>B.A.Sc., Electrical and Computer Engineering, PEY Co-op
-              <br>
-              <b>Expected Graduation: </b>Jun 2029
-            </p>
-            <ul>
-              <p><b>Relevant Coursework:</b>
+      <h3 class="page-title white-text teal">Education</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 l8">
+            <div class="card">
+              <div class="card-content">
+                <p>
+                  <span class="card-title"><a href="https://www.utoronto.ca/" target="_blank" class="teal-text hoverline">University of Toronto</a></span>
+                </p>
+                <p class="brown-text">Toronto, Canada</p>
+                <p>
+                  <b>Degree: </b>B.A.Sc., Electrical and Computer Engineering, PEY Co-op
+                  <br>
+                  <b>Expected Graduation: </b>Jun 2029
+                </p>
                 <ul>
-                  <li>Algorithms and Data Structures</li>
-                  <li>Software Design and Communication</li>
-                  <li>Software Engineering</li>
-                  <li>Computer Organization</li>
-                  <li>Digital Systems</li>
-                  <li>Applied Deep Learning</li>
-                  <li>Intro to Machine Learning</li>
+                  <p><b>Relevant Coursework:</b>
+                    <ul>
+                      <li>Algorithms and Data Structures</li>
+                      <li>Software Design and Communication</li>
+                      <li>Software Engineering</li>
+                      <li>Computer Organization</li>
+                      <li>Digital Systems</li>
+                      <li>Applied Deep Learning</li>
+                      <li>Intro to Machine Learning</li>
+                    </ul>
+                  </p>
                 </ul>
-              </p>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Places Travelled -->
-<section id="places" class="section scrollspy">
-  <h3 class="page-title white-text teal">Places Travelled</h3>
-  <div class="container">
-    <p class="flow-text">
-      Places I'd love to visit one day.
-    </p>
-    <div class="row">
-      <div class="col s12 m4">
-        <h5 class="teal-text">Japan</h5>
-        <iframe
-          src="https://maps.google.com/maps?q=Japan&t=&z=5&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
+    <!-- Places Travelled -->
+    <section id="places" class="section scrollspy">
+      <h3 class="page-title white-text teal">Places Travelled</h3>
+      <div class="container">
+        <p class="flow-text">
+          Places I'd love to visit one day.
+        </p>
+        <div class="row">
+          <div class="col s12 m4">
+            <h5 class="teal-text">Japan</h5>
+            <iframe
+              src="https://maps.google.com/maps?q=Japan&t=&z=5&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="teal-text">Greece</h5>
+            <iframe
+              src="https://maps.google.com/maps?q=Greece&t=&z=6&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+          <div class="col s12 m4">
+            <h5 class="teal-text">Saudi Arabia</h5>
+            <iframe
+              src="https://maps.google.com/maps?q=Saudi+Arabia&t=&z=5&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m4">
-        <h5 class="teal-text">Greece</h5>
-        <iframe
-          src="https://maps.google.com/maps?q=Greece&t=&z=6&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section scrollspy full-height">
+      <h3 class="page-title white-text teal">Contact</h3>
+      <div class="container">
+        <p>
+          <a aria-label="Email Faria" href="mailto:faria.akbar@mail.utoronto.ca" target="_blank" data-position="top"
+            data-tooltip="Email Faria" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
+              class="fa fa-envelope"></i></a>
+          <a aria-label="Email Faria" href="mailto:faria.akbar@mail.utoronto.ca" class="hoverline">faria.akbar@mail.utoronto.ca</a>
+        </p>
+        <p>
+          <a aria-label="View Faria on GitHub" href="https://github.com/FariaSamanta" target="_blank"
+            data-position="top" data-tooltip="View Faria on GitHub"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
+          <a aria-label="Faria on GitHub" href="https://github.com/FariaSamanta" class="hoverline"
+            target="_blank">github.com/FariaSamanta</a>
+        </p>
+        <p>
+          <a aria-label="View Faria on LinkedIn" href="https://linkedin.com/in/faria-samanta-akbar" target="_blank"
+            data-position="top" data-tooltip="View Faria on LinkedIn"
+            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-linkedin"></i></a>
+          <a aria-label="Faria on LinkedIn" href="https://linkedin.com/in/faria-samanta-akbar"
+            class="hoverline" target="_blank">linkedin.com/in/faria-samanta-akbar</a>
+        </p>
       </div>
-      <div class="col s12 m4">
-        <h5 class="teal-text">Saudi Arabia</h5>
-        <iframe
-          src="https://maps.google.com/maps?q=Saudi+Arabia&t=&z=5&ie=UTF8&iwloc=&output=embed"
-          width="100%" height="250" style="border:0;" allowfullscreen loading="lazy">
-        </iframe>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-    <!-- 9ht Section: Contact -->
-<!-- Eight Section: Contact -->
-<section id="contact" class="section scrollspy full-height">
-  <h3 class="page-title white-text teal">Contact</h3>
-  <div class="container">
-    <p>
-      <a aria-label="Email Faria" href="mailto:faria.akbar@mail.utoronto.ca" target="_blank" data-position="top"
-        data-tooltip="Email Faria" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-          class="fa fa-envelope"></i></a>
-      <a aria-label="Email Faria" href="mailto:faria.akbar@mail.utoronto.ca" class="hoverline">faria.akbar@mail.utoronto.ca</a>
-    </p>
-    <p>
-      <a aria-label="View Faria on GitHub" href="https://github.com/FariaSamanta" target="_blank"
-        data-position="top" data-tooltip="View Faria on GitHub"
-        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
-      <a aria-label="Faria on GitHub" href="https://github.com/FariaSamanta" class="hoverline"
-        target="_blank">github.com/FariaSamanta</a>
-    </p>
-    <p>
-      <a aria-label="View Faria on LinkedIn" href="https://linkedin.com/in/faria-samanta-akbar" target="_blank"
-        data-position="top" data-tooltip="View Faria on LinkedIn"
-        class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-linkedin"></i></a>
-      <a aria-label="Faria on LinkedIn" href="https://linkedin.com/in/faria-samanta-akbar"
-        class="hoverline" target="_blank">linkedin.com/in/faria-samanta-akbar</a>
-    </p>
-  </div>
-</section>
+  </main>
 
+  <!-- Animated wave background: draws glowing sine waves reacting to scroll and clicks -->
+  <script>
+  (function() {
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
 
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    const waves = [];
+    for (let i = 0; i < 5; i++) {
+      waves.push({
+        amplitude: 40 + Math.random() * 40,
+        wavelength: 300 + Math.random() * 300,
+        speed: 0.0015 + Math.random() * 0.0025,
+        phase: Math.random() * Math.PI * 2,
+        yOffset: height * (0.25 + i * 0.13),
+        lineWidth: 2 + Math.random() * 3,
+        alpha: 0.25 + Math.random() * 0.35
+      });
+    }
+
+    let scrollEnergy = 0;
+    window.addEventListener('scroll', function() {
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      scrollEnergy = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    });
+
+    let pulses = [];
+    function addPulse(x, y) {
+      pulses.push({ x: x, y: y, radius: 0, alpha: 0.9 });
+    }
+    window.addEventListener('click', function(e) {
+      addPulse(e.clientX, e.clientY);
+    });
+    window.addEventListener('touchstart', function(e) {
+      if (e.touches && e.touches.length > 0) {
+        addPulse(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    });
+
+    let t = 0;
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = '#05050a';
+      ctx.fillRect(0, 0, width, height);
+
+      const speedBoost = 1 + scrollEnergy * 2;
+      const ampBoost = 1 + scrollEnergy * 0.8;
+
+      waves.forEach(function(w, idx) {
+        ctx.beginPath();
+        const hue = 210 + idx * 6;
+        ctx.strokeStyle = 'hsla(' + hue + ', 90%, 60%, ' + w.alpha + ')';
+        ctx.lineWidth = w.lineWidth;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = 'hsla(' + hue + ', 100%, 65%, 0.8)';
+
+        for (let x = 0; x <= width; x += 4) {
+          const y = w.yOffset + Math.sin(x / w.wavelength + w.phase + t * w.speed * speedBoost) * w.amplitude * ampBoost;
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+      });
+
+      ctx.shadowBlur = 0;
+
+      pulses = pulses.filter(function(p) { return p.alpha > 0.02; });
+      pulses.forEach(function(p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(166, 200, 255, ' + p.alpha + ')';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        p.radius += 4;
+        p.alpha *= 0.96;
+      });
+
+      t += 1;
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+  </script>
+
+  <!-- Projects data and rendering, with category filtering -->
+  <script>
+    const projectsData = [
+      {
+        title: "Voyagista Explorer",
+        description: "A street map and courier-routing application built in C++.",
+        image: "/assets/img/project-voyagista.png",
+        tools: "C++, EZGL, GTK",
+        categories: ["software"],
+        bullets: [
+          "Implemented driving, walking, and walk-to-pickup routing using Dijkstra shortest-path search.",
+          "Cut pickup-search computation about 35% with a single reverse search from the destination.",
+          "Built a multi-threaded delivery optimizer using std::async, std::atomic, and std::mutex.",
+          "Accelerated preprocessing about 3 times and improved route quality about 20%."
+        ],
+        action: { type: "github", url: "https://github.com/FariaSamanta/TODO-voyagista", label: "Visit the GitHub repo for Voyagista Explorer" }
+      },
+      {
+        title: "UTMIST AI2",
+        description: "A reinforcement learning agent trained to play a fighting game, presented at EXPO.",
+        image: "/assets/img/project-utmist.png",
+        tools: "Python, OpenAI Gym, Stable Baselines 3, PPO, Tenstorrent TTNN",
+        categories: ["ai-ml"],
+        bullets: [
+          "Built a custom Gym environment and PPO agent, improving training convergence about 25% through reward shaping.",
+          "Reached Top 10 placement and presented the agent at EXPO.",
+          "Ported the trained model to Tenstorrent's TTNN accelerator stack, adapting PyTorch tensor operations to a grid-based architecture."
+        ],
+        action: { type: "github", url: "https://github.com/FariaSamanta/UTMIST-AI2", label: "Visit the GitHub repo for UTMIST AI2" }
+      },
+      {
+        title: "Voice-Controlled Ball Survival Game",
+        description: "A real-time embedded game built in assembly and C on the DE1-SoC.",
+        image: "/assets/img/project-ece243.png",
+        tools: "Assembly, C, DE1-SoC, VGA graphics, audio input",
+        categories: ["embedded", "software"],
+        bullets: [
+          "Built a real-time game using memory-mapped IO for VGA frame-buffer rendering.",
+          "Implemented live audio input, using microphone amplitude and pitch as the game's control input.",
+          "Modeled ball physics with gravity and collision, mapping amplitude directly to lift force as the survival mechanic.",
+          "Detected pitch in real time using a zero-crossing algorithm.",
+          "Validated the game on both the CPUlator simulator and physical DE1-SoC hardware."
+        ],
+        action: { type: "none" }
+      },
+      {
+        title: "FPGA Reaction Game",
+        description: "A hardware-only game built in Verilog on the DE1-SoC testing both reaction speed and sustained focus, with mirrored on-screen text as an added cognitive challenge.",
+        image: "/assets/img/fpga_game1.webp",
+        tools: "Verilog, DE1-SoC, Quartus, ModelSim",
+        categories: ["embedded"],
+        bullets: [
+          "Designed hardware-only game logic in Verilog, including debouncing, edge detection, and FSM input validation.",
+          "Randomly assigned each of 3 physical buttons a colour prompt at random time intervals up to 7 seconds apart to test sustained focus rather than pure reaction speed.",
+          "Required a different response per colour: two presses for blue, one press for green, and no press for red.",
+          "Built a scoring and warning FSM awarding points for correct responses and ending the game after repeated mistakes.",
+          "Displayed all on-screen text mirrored, forcing the player to decode it under time pressure as part of the challenge."
+        ],
+        action: {
+          type: "gallery",
+          images: [
+            { src: "/assets/img/fpga_game3.webp", alt: "Mirrored reaction game title screen" },
+            { src: "/assets/img/fpga_game4.webp", alt: "Mirrored player selection screen, 1 player or 2 player" },
+            { src: "/assets/img/fpga_game2.webp", alt: "Mirrored game over screen with score and time" }
+          ]
+        }
+      }
+    ];
+
+    let projectsShown = 0;
+    const PROJECTS_PER_LOAD = 2;
+    let currentFilter = "all";
+
+    function renderProjectCard(project) {
+      let actionHtml = "";
+      if (project.action.type === "github") {
+        actionHtml = `
+          <div class="card-action">
+            <a aria-label="${project.action.label}" href="${project.action.url}" target="_blank"
+              data-position="top" data-tooltip="View Source"
+              class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped">
+              <i class="fa fa-github"></i>
+            </a>
+          </div>`;
+      } else if (project.action.type === "gallery") {
+        const thumbs = project.action.images.map(img => `
+          <div class="col s4">
+            <img alt="${img.alt}" src="${img.src}" class="materialboxed responsive-img" style="width: 100%;" />
+          </div>`).join("");
+        actionHtml = `
+          <p><small class="grey-text">Click any image to enlarge</small></p>
+          <div class="row" style="margin-bottom: 0;">${thumbs}</div>`;
+      }
+
+      const bulletsHtml = project.bullets.map(b => `<li>${b}</li>`).join("");
+
+      return `
+        <div class="col s12 m6 l4 project-card-wrapper">
+          <div class="card medium">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img alt="${project.title}" src="${project.image}" style="height: 100%; width: 100%" class="activator" />
+            </div>
+            <div class="card-content">
+              <span class="card-title activator teal-text hoverline">${project.title}<i class="mdi-navigation-more-vert right"></i></span>
+              <p>${project.description}</p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
+              <ul>
+                <li><b>Tools:</b> ${project.tools}</li>
+                ${bulletsHtml}
+              </ul>
+              ${actionHtml}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function loadMoreProjects() {
+      const container = document.getElementById("projects-container");
+      const nextBatch = projectsData.slice(projectsShown, projectsShown + PROJECTS_PER_LOAD);
+      nextBatch.forEach(project => {
+        container.insertAdjacentHTML("beforeend", renderProjectCard(project));
+      });
+      projectsShown += nextBatch.length;
+      $(".materialboxed").materialbox();
+
+      if (projectsShown >= projectsData.length) {
+        const btn = document.getElementById("load-more-btn");
+        btn.disabled = true;
+        btn.textContent = "All projects loaded";
+        btn.classList.add("disabled");
+      }
+    }
+
+    function renderFiltered(category) {
+      const container = document.getElementById("projects-container");
+      container.innerHTML = "";
+      const matches = projectsData.filter(p => p.categories.includes(category));
+      matches.forEach(project => {
+        container.insertAdjacentHTML("beforeend", renderProjectCard(project));
+      });
+      $(".materialboxed").materialbox();
+      document.getElementById("load-more-btn").style.display = "none";
+    }
+
+    function resetToAllView() {
+      const container = document.getElementById("projects-container");
+      container.innerHTML = "";
+      projectsShown = 0;
+      const btn = document.getElementById("load-more-btn");
+      btn.style.display = "inline-block";
+      btn.disabled = false;
+      btn.textContent = "Load More";
+      btn.classList.remove("disabled");
+      loadMoreProjects();
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      loadMoreProjects();
+      document.getElementById("load-more-btn").addEventListener("click", loadMoreProjects);
+
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+          this.classList.add("active");
+          currentFilter = this.getAttribute("data-filter");
+          if (currentFilter === "all") {
+            resetToAllView();
+          } else {
+            renderFiltered(currentFilter);
+          }
+        });
+      });
+    });
+  </script>
 
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script type="text/javascript">
     var typed = new Typed('.typing',{
       strings: [
-  "ECE Student",
-  "AI/ML Engineer",
-  "Software & Embedded Developer",
-  "Product Builder",
-  "Project & Product Leader"
-],
+        "ECE Student",
+        "AI/ML Engineer",
+        "Software & Embedded Developer",
+        "Product Builder",
+        "Project & Product Leader"
+      ],
       loop: true,
       typeSpeed: 80,
       backSpeed: 40
     });
   </script>
-
 
   <!-- jQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -752,14 +742,12 @@
   <!-- Materialize - Compiled and minified JavaScript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
   <script>
-    // Materialize - Initializers
     $(document).ready(function () {
       $(".scrollspy").scrollSpy()
-      // Initialize collapse button
       $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+        menuWidth: 190,
+        edge: "left",
+        closeOnClick: true
       })
     })
   </script>
