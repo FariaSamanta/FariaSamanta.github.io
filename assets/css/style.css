@@ -672,3 +672,53 @@ main {
 .name-title a, .name-title span {
   color: var(--sparkle) !important;
 }
+
+/* Activity 6: Light/dark mode toggle */
+body.light-mode {
+  background: #f4f6fb !important;
+  color: #2b2b2b !important;
+}
+
+body.light-mode #bg-canvas {
+  display: none;
+}
+
+body.light-mode a {
+  color: #004d40 !important;
+}
+
+body.light-mode a.hoverline:hover {
+  border-bottom: 3px solid #004d40 !important;
+}
+
+body.light-mode nav,
+body.light-mode .side-nav {
+  background-color: #fafafa !important;
+}
+
+body.light-mode .side-nav li > a,
+body.light-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+body.light-mode ul#slide-out li:not(.logo) a span {
+  color: #333 !important;
+}
+
+body.light-mode .name-title a,
+body.light-mode .name-title span {
+  color: #333 !important;
+}
+
+body.light-mode #intro.section .container *:not(span) {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.light-mode .overlay {
+  background-color: rgba(0, 0, 0, 0.35) !important;
+}
+
+body.light-mode .filter-btn {
+  background-color: #999 !important;
+}
+
+body.light-mode .filter-btn.active {
+  background-color: var(--royal-blue) !important;
+}

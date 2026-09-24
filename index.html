@@ -59,10 +59,14 @@
       <li class="logo">
         <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
           class="brand-logo grey-blue-text">
-          <img src="/assets/img/picture.jpg" class="circle img-responsive profile-pic" alt="avatar">
+          <img src="/assets/img/picture.png" class="circle img-responsive profile-pic" alt="avatar">
         </a>
       </li>
-
+     
+      <li class="bold">
+  <a aria-label="Toggle light or dark mode" href="#" id="theme-toggle" class="waves-effect waves-dark teal-text"><i
+      class="mdi-image-brightness-2 small" id="theme-toggle-icon"></i><span id="theme-toggle-label">Dark Mode</span></a>
+</li>
       <li class="bold">
         <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-person small"></i><span>About</span></a>
@@ -103,6 +107,9 @@
   <nav class="hide-on-large only trigger z-depth-1">
     <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
       class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+      <a aria-label="Toggle light or dark mode" href="#" id="theme-toggle-mobile" style="position: absolute; 
+      right: 15px; top: 0; height: 64px; line-height: 64px;"><i class="mdi-image-brightness-2" id="theme-toggle-icon-mobile" 
+      style="color: var(--sparkle); font-size: 24px;"></i></a>
     <div class="name-title">
       <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Faria Samanta Akbar</a>
       <span>ECE | AI/ML | Product | Software Developer</span>
@@ -751,6 +758,46 @@
       })
     })
   </script>
+
+  <script>
+(function() {
+  const STORAGE_KEY = 'faria-portfolio-theme';
+
+  function applyTheme(isLight) {
+    document.body.classList.toggle('light-mode', isLight);
+    const iconClass = isLight ? 'mdi-image-brightness-7' : 'mdi-image-brightness-2';
+    const labelText = isLight ? 'Light Mode' : 'Dark Mode';
+
+    ['theme-toggle-icon', 'theme-toggle-icon-mobile', 'theme-toggle-icon-slideout'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.classList.remove('mdi-image-brightness-2', 'mdi-image-brightness-7');
+        el.classList.add(iconClass);
+      }
+    });
+    ['theme-toggle-label', 'theme-toggle-label-slideout'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = labelText;
+    });
+  }
+
+  function toggleTheme(e) {
+    if (e) e.preventDefault();
+    const isLight = !document.body.classList.contains('light-mode');
+    applyTheme(isLight);
+    localStorage.setItem(STORAGE_KEY, isLight ? 'light' : 'dark');
+  }
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  applyTheme(saved === 'light');
+
+  ['theme-toggle', 'theme-toggle-mobile', 'theme-toggle-slideout'].forEach(function(id) {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('click', toggleTheme);
+  });
+})();
+</script>
+
 </body>
 
 </html>
